@@ -14,49 +14,37 @@ class TrackShipmentScreen extends StatelessWidget {
     return Scaffold(
       key: scaffoldKey,
       resizeToAvoidBottomInset: false,
+      appBar: AppBar(
+        title: Text(
+          'Track your Shipment',
+          style: GoogleFonts.k2d(
+            textStyle: const TextStyle(
+              fontSize: 24,
+              fontWeight: FontWeight.w500,
+              color: Color.fromRGBO(241, 122, 41, 1),
+            ),
+          ),
+        ),
+        shape: const RoundedRectangleBorder(
+          borderRadius: BorderRadius.only(
+            bottomRight: Radius.circular(17),
+            bottomLeft: Radius.circular(17),
+          ),
+        ),
+        actions: [
+          TextButton(
+            onPressed: () => scaffoldKey.currentState!.openEndDrawer(),
+            child: SvgPicture.asset(
+              'assets/images/drawer.svg',
+              color: const Color.fromRGBO(241, 122, 41, 1),
+            ),
+          ),
+        ],
+        backgroundColor: Theme.of(context).appBarTheme.backgroundColor,
+      ),
       endDrawer: const CustomDrawer(),
       body: Column(
         children: [
-          Container(
-            alignment: Alignment.topCenter,
-            height: size.height * 0.13,
-            width: size.width,
-            decoration: const BoxDecoration(
-              borderRadius: BorderRadius.only(
-                bottomRight: Radius.circular(25.0),
-                bottomLeft: Radius.circular(25.0),
-              ),
-              color: Color.fromRGBO(30, 38, 85, 1),
-            ),
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Padding(
-                  padding: const EdgeInsets.only(top: 50, left: 20),
-                  child: Text(
-                    "Track Your Shipment",
-                    style: GoogleFonts.k2d(
-                      textStyle: const TextStyle(
-                        fontSize: 24,
-                        fontWeight: FontWeight.w500,
-                        color: Color.fromRGBO(241, 122, 41, 1),
-                      ),
-                    ),
-                  ),
-                ),
-                Padding(
-                  padding: const EdgeInsets.only(top: 50),
-                  child: TextButton(
-                    onPressed: () => scaffoldKey.currentState!.openEndDrawer(),
-                    child: SvgPicture.asset(
-                      'assets/images/drawer.svg',
-                      color: const Color.fromRGBO(241, 122, 41, 1),
-                    ),
-                  ),
-                ),
-              ],
-            ),
-          ),
           const SizedBox(
             height: 80,
           ),

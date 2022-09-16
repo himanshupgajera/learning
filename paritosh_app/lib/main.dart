@@ -19,19 +19,21 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      themeMode: ThemeMode.dark,
+      //themeMode: ThemeMode.dark,
       theme: ThemeData(
-        primaryColorLight: const Color.fromARGB(255, 112, 195, 233),
-        primaryColorDark: const Color.fromARGB(255, 26, 2, 91),
+        // primaryColor: Color.fromRGBO(30, 38, 85, 1),
+        colorScheme: ColorScheme.fromSwatch()
+            .copyWith(secondary: const Color.fromRGBO(30, 38, 85, 1)),
+        appBarTheme:
+            AppBarTheme(backgroundColor: const Color.fromRGBO(30, 38, 85, 1)),
       ),
       debugShowCheckedModeBanner: false,
       home: const SplashScreen(),
       routes: {
-        TrackShipmentScreen.routeName: (context) =>
-            const TrackShipmentScreen(),
+        TrackShipmentScreen.routeName: (context) => const TrackShipmentScreen(),
         NetworkScreen.routeName: (context) => const NetworkScreen(),
         ServiceAreaScreen.routeName: (context) => const ServiceAreaScreen(),
-        // PrivacyPolicyScreen.routeName: (context) => const PrivacyPolicyScreen(),
+        PrivacyPolicyScreen.routeName: (context) => const PrivacyPolicyScreen(),
         NewsScreen.routeName: (context) => const NewsScreen(),
         WeightCalculatorScreen.routeName: (context) =>
             const WeightCalculatorScreen(),

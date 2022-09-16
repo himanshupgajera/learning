@@ -156,8 +156,8 @@ class _CustomDrawerState extends State<CustomDrawer> {
                         style: TextStyle(
                           fontSize: 20.0,
                         )),
-                    // onTap: () => Navigator.of(context)
-                    //     .pushReplacementNamed(PrivacyPolicyScreen.routeName),
+                    onTap: () => Navigator.of(context)
+                        .pushReplacementNamed(PrivacyPolicyScreen.routeName),
                     textColor: Theme.of(context).primaryColorDark,
                   ),
                 ],
