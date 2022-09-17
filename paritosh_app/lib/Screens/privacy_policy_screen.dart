@@ -3,6 +3,8 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:paritosh_app/widgets/drawer.dart';
 import 'package:google_fonts/google_fonts.dart';
 
+import '../constants.dart';
+
 class PrivacyPolicyScreen extends StatefulWidget {
   static const String routeName = '/policy';
   const PrivacyPolicyScreen({Key? key}) : super(key: key);
@@ -26,7 +28,7 @@ class _PrivacyPolicyScreenState extends State<PrivacyPolicyScreen> {
             textStyle: const TextStyle(
               fontSize: 24,
               fontWeight: FontWeight.w500,
-              color: Color.fromRGBO(241, 122, 41, 1),
+              color: Const.titleColor,
             ),
           ),
         ),
@@ -41,7 +43,7 @@ class _PrivacyPolicyScreenState extends State<PrivacyPolicyScreen> {
             onPressed: () => scaffoldKey.currentState!.openEndDrawer(),
             child: SvgPicture.asset(
               'assets/images/drawer.svg',
-              color: const Color.fromRGBO(241, 122, 41, 1),
+              color: Const.titleColor,
             ),
           ),
         ],
@@ -65,7 +67,7 @@ class _PrivacyPolicyScreenState extends State<PrivacyPolicyScreen> {
                       children: [
                         const Icon(
                           Icons.circle,
-                          color: Color.fromRGBO(241, 122, 41, 1),
+                          color: Const.titleColor,
                         ),
                         SizedBox(
                           width: size.width * 0.02,
@@ -107,7 +109,7 @@ class _PrivacyPolicyScreenState extends State<PrivacyPolicyScreen> {
                       children: [
                         const Icon(
                           Icons.circle,
-                          color: Color.fromRGBO(241, 122, 41, 1),
+                          color: Const.titleColor,
                         ),
                         const SizedBox(
                           width: 10,
@@ -179,7 +181,7 @@ class _PrivacyPolicyScreenState extends State<PrivacyPolicyScreen> {
 //                       textStyle: const TextStyle(
 //                         fontSize: 24,
 //                         fontWeight: FontWeight.w500,
-//                         color: Color.fromRGBO(241, 122, 41, 1),
+//                         color: Const.titleColor,
 //                       ),
 //                     ),
 //                   ),
@@ -187,7 +189,7 @@ class _PrivacyPolicyScreenState extends State<PrivacyPolicyScreen> {
 //                     onTap: () => scaffoldKey.currentState!.openEndDrawer(),
 //                     child: SvgPicture.asset(
 //                       'assets/images/drawer.svg',
-//                       color: const Color.fromRGBO(241, 122, 41, 1),
+//                       color: Const.titleColor,
 //                     ),
 //                   ),
 //                 ],
