@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:paritosh_app/widgets/drawer.dart';
-// import 'package:paritosh_app/widgets/network_list.dart';
-// import 'package:paritosh_app/widgets/searchbar.dart';
+
 import 'package:google_fonts/google_fonts.dart';
+
+import '../constants.dart';
 
 class NetworkScreen extends StatefulWidget {
   static const String routeName = '/network';
@@ -46,7 +47,7 @@ class _NetworkScreenState extends State<NetworkScreen> {
                       textStyle: const TextStyle(
                         fontSize: 24,
                         fontWeight: FontWeight.w500,
-                        color: Color.fromRGBO(241, 122, 41, 1),
+                        color: Const.titleColor,
                       ),
                     ),
                   ),
@@ -57,7 +58,7 @@ class _NetworkScreenState extends State<NetworkScreen> {
                     onPressed: () => scaffoldKey.currentState!.openEndDrawer(),
                     child: SvgPicture.asset(
                       'assets/images/drawer.svg',
-                      color: const Color.fromRGBO(241, 122, 41, 1),
+                      color: Const.titleColor,
                     ),
                   ),
                 ),

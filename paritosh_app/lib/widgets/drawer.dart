@@ -25,51 +25,52 @@ class _CustomDrawerState extends State<CustomDrawer> {
       child: SafeArea(
         child: Stack(
           children: [
+            // Container(
+            //   decoration: BoxDecoration(
+            //     color: Theme.of(context).primaryColorDark,
+            //     borderRadius: const BorderRadius.only(
+            //       bottomLeft: Radius.circular(50.0),
+            //       topLeft: Radius.circular(50.0),
+            //     ),
+            //   ),
+            //   alignment: Alignment.bottomCenter,
+            //   child: SizedBox(
+            //     height: size.height * 0.13,
+            //     width: size.width * 0.5,
+            //     child: Row(
+            //       mainAxisAlignment: MainAxisAlignment.center,
+            //       children: [
+            //         SvgPicture.asset(
+            //           "assets/images/facebook.svg",
+            //           height: 30,
+            //           width: 30,
+            //           color: Theme.of(context).primaryColorLight,
+            //         ),
+            //         const SizedBox(width: 30),
+            //         SvgPicture.asset(
+            //           "assets/images/twitter.svg",
+            //           height: 30,
+            //           width: 30,
+            //           color: Theme.of(context).primaryColorLight,
+            //         ),
+            //         const SizedBox(width: 30),
+            //         SvgPicture.asset(
+            //           "assets/images/instagram.svg",
+            //           height: 30,
+            //           width: 30,
+            //           color: Theme.of(context).primaryColorLight,
+            //         ),
+            //       ],
+            //     ),
+            //   ),
+            // ),
             Container(
-              decoration: BoxDecoration(
-                color: Theme.of(context).primaryColorDark,
-                borderRadius: const BorderRadius.only(
-                  bottomLeft: Radius.circular(50.0),
-                  topLeft: Radius.circular(50.0),
-                ),
-              ),
-              alignment: Alignment.bottomCenter,
-              child: SizedBox(
-                height: size.height * 0.13,
-                width: size.width * 0.5,
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    SvgPicture.asset(
-                      "assets/images/facebook.svg",
-                      height: 30,
-                      width: 30,
-                      color: Theme.of(context).primaryColorLight,
-                    ),
-                    const SizedBox(width: 30),
-                    SvgPicture.asset(
-                      "assets/images/twitter.svg",
-                      height: 30,
-                      width: 30,
-                      color: Theme.of(context).primaryColorLight,
-                    ),
-                    const SizedBox(width: 30),
-                    SvgPicture.asset(
-                      "assets/images/instagram.svg",
-                      height: 30,
-                      width: 30,
-                      color: Theme.of(context).primaryColorLight,
-                    ),
-                  ],
-                ),
-              ),
-            ),
-            Container(
-              height: size.height * 0.85,
+              height: size.height,
               decoration: BoxDecoration(
                 color: Theme.of(context).primaryColorLight,
                 borderRadius: const BorderRadius.only(
                   topLeft: Radius.circular(50.0),
+                  bottomLeft: Radius.circular(50.0),
                 ),
               ),
               child: ListView(
@@ -156,8 +157,8 @@ class _CustomDrawerState extends State<CustomDrawer> {
                         style: TextStyle(
                           fontSize: 20.0,
                         )),
-                    // onTap: () => Navigator.of(context)
-                    //     .pushReplacementNamed(PrivacyPolicyScreen.routeName),
+                    onTap: () => Navigator.of(context)
+                        .pushReplacementNamed(PrivacyPolicyScreen.routeName),
                     textColor: Theme.of(context).primaryColorDark,
                   ),
                 ],
